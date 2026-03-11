@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Guardians:Midnight BIT</title>
+        <link rel="stylesheet" href="login.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="login.js"></script>
+    </head>
+
+    <body>
+     <header>
+    <h1>Guardians: Midnight BIT</h1>
+    <nav>
+    <ul>
+        <li><a href="../other pages/information_page.html">About Our Team</a></li>
+        <li><a href="../achv/achv.html">Achievements</a></li>
+        <li><a href="../other pages/strategy_page.html">Strategy/Walkthrough</a></li>
+    </ul>
+    </nav>
+    </header>
+
+        <div class="fade" id="fade"></div>
+        <div class="wrapper">
+          
+
+            <div class="form_container">
+                <div class="form_nav">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="nav_text login">Login</label>
+                    <label for="signup" class="nav_text signup">Register</label>
+                    <div class="slider_tab"></div>
+                </div>
+                
+                <div class="form_inner">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="Username" id="login_UN" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="Password" id="login_PW" required>
+                        </div>
+    
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Login" onclick="log()">
+                        </div>
+                        <a href="#" onclick="fadeToBlack(event)" class="link_text">About us</a>
+                        <script>
+                            function fadeToBlack(event) {
+                                event.preventDefault(); // 阻止默认链接跳转
+                                const fadeElement = document.getElementById('fade');
+                                fadeElement.style.pointerEvents = 'auto'; // 允许事件穿透
+                                fadeElement.style.opacity = 1; // 开始渐变为全黑
+                                setTimeout(() => {
+                                    window.location.href = "../other pages/information_page.html"; // 渐变完成后跳转到新页面
+                                }, 1000); // 设置渐变时间与 CSS transition 时间一致
+                            }
+                        </script>
+                    </form>
+    
+                    <form class="signup">
+                        <div class="field">
+                            <input type="text" placeholder="Username" id="signup_UN" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="Please type your password" id="signup_PW1" required>
+                        </div>
+    
+                        <div class="field">
+                            <input type="password" placeholder="Confirm your password" id="signup_PW2" required>
+                        </div>
+    
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Register" onclick="reg()">
+                        </div>
+                        <a href="#" class="link_text">About us</a>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        
+
+    </body>
+
+</html>
