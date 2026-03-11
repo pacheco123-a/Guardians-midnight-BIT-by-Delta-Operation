@@ -1,0 +1,45 @@
+/* 背包界面样式 */
+#inventory {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 80%;
+  background: rgba(0, 0, 0, 0.85);
+  border: 3px solid #fff;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "微软雅黑", sans-serif;
+  display: none; /* 默认隐藏 */
+  flex-direction: column;
+  padding: 20px;
+  z-index: 10000;
+}
+
+#inventory h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#inventory ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#inventory ul li {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+}
+
+#inventory ul li:last-child {
+  border-bottom: none;
+}
+
+#inventory .empty {
+  text-align: center;
+  font-style: italic;
+  color: #bbb;
+}
