@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <!-- 外层菱形线条 -->
+  <path d="M320,170 L250,100 L150,200 L250,300 L330,220" stroke="white" stroke-width="12" fill="none"/>
+  <!-- 内层菱形线条 -->
+  <path d="M280,170 L250,140 L190,200 L250,260 L290,220" stroke="white" stroke-width="12" fill="none"/>
+  <!-- 水平线条 -->
+  <path d="M260,200 L345,200" stroke="white" stroke-width="15" fill="none"/>
+  
+  <!-- 四个三角形标记 -->
+  <polygon points="324,165.5 315.5,174.5 332.5,174.5" fill="white" stroke="none"/>
+  <polygon points="284,165.5 275.5,174.5 292.5,174.5" fill="white" stroke="none"/>
+  <polygon points="294,224.5 285.5,215.5 302.5,215.5" fill="white" stroke="none"/>
+  <polygon points="334,224.5 325.5,215.5 342.5,215.5" fill="white" stroke="none"/>
+  <polygon points="345,192 345,208 355,200" fill="white" stroke="none"/>
+  
+  <!-- 文字内容 -->
+  <text x="130" y="360" font-family="Arial" font-size="50" font-weight="bold" fill="white">Guardians</text>
+  <text x="130" y="410" font-family="Arial" font-size="45" fill="white">Midnight BIT</text>
+</svg>
