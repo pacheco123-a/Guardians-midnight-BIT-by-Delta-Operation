@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians: Midnight BIT</title>
+    <link rel="stylesheet" href="mygame.css">
+    <link rel="stylesheet" href="../menu/menu.css"><!-- 菜单样式 -->
+</head>
+<body>
+    <div class="game-info">
+        <h1>Guardians: Midnight BIT</h1>
+        <p>分数: <span id="score">0</span></p >
+        <p>使用WASD键移动, 空格键进入建筑物, ESC键返回</p >
+
+    <div id="game-container" style="display: none;"></div>
+    <canvas id="gameCanvas" width="1600" height="900"></canvas>  
+
+    <!-- 菜单组件 -->
+    <div id="menu-button"><span>菜单(Esc)</span></div>
+    <div id="menu-overlay" class="hidden">
+    <div id="menu-container">
+    <h2>游戏菜单</h2>
+    <button id="newgame-btn">新游戏</button>
+    <button id="exit-btn">退出</button>
+    <div class="volume-control">
+      <button id="mute-btn">音量开/关</button>
+    </div>
+    <button id="close-btn">关闭(Esc)</button>
+    </div>
+    </div>
+
+
+
+    <div id="dialogueBox"></div>
+
+    <script src="mygame.js"></script>
+    <script>
+    function resizeCanvas() {
+        const canvas = document.getElementById("gameCanvas");
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        const windowRatio = windowWidth / windowHeight;
+        const gameRatio = 16 / 9;
+
+        if (windowRatio > gameRatio) {
+            canvas.style.height = windowHeight + "px";
+            canvas.style.width = (windowHeight * gameRatio) + "px";
+        } else {
+            canvas.style.width = windowWidth + "px";
+            canvas.style.height = (windowWidth / gameRatio) + "px";
+        }
+
+        // 居中
+        canvas.style.display = "block";
+        canvas.style.margin = "auto";
+        canvas.style.position = "absolute";
+        canvas.style.top = "0";
+        canvas.style.bottom = "0";
+        canvas.style.left = "0";
+        canvas.style.right = "0";
+    }
+
+  window.addEventListener("resize", resizeCanvas);
+  window.addEventListener("load", resizeCanvas);
+</script>
+<!-- 背包界面 -->
+<link rel="stylesheet" href="inventory/inventory.css">
+
+<div id="inventory">
+  <h2>🎒 背包</h2>
+  <ul></ul>
+</div>
+
+<script src="inventory/inventory.js"></script>
+<!-- 菜单界面 -->
+<script src="../menu/menu.js"></script>
+<audio id="ambientAudio" src="../sound/ambient.mp3" loop></audio>
+<audio id="walkingAudio" src="../sound/walking.mp3"></audio>
+<audio id="pickupAudio" src="../sound/picking up.mp3"></audio>
+<audio id="dieAudio" src="../sound/die.mp3"></audio>
+<audio id="diamondAudio" src="../sound/picking up.mp3.mp3"></audio>
+<audio id="biteAudio" src="../sound/bite.mp3"></audio>
+<audio id="surprisingAudio" src="../sound/surprising.mp3"></audio>
+<audio id="victoryAudio" src="../sound/victory.mp3"></audio>
+</body>
+</html>
