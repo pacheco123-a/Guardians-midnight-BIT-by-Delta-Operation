@@ -1,0 +1,454 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(20, 29, 42, 0.8);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+    font-size: 18px;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(images/logo1.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 500px;
+    text-indent: -9999px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+.title {
+    background-color: antiquewhite;
+    color: white;
+    height: 95vh;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h2 {
+    font-size: 70px;
+    margin: 40px 0;
+}
+
+.title h3 {
+    color: #FEF7E6;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.title p {
+    color: #FEF7E6;
+    font-size: 30px;
+    margin: 50px 0;
+}
+
+.title a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ACACAC;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.slogan {
+    background-color: #141D2A;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    line-height: 4.0em;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;             /* 允许换行 ✅ */
+    background-color: #141D2A;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 180px 80px;
+    color: antiquewhite;
+}
+
+.members div {
+    width: 300px;  /* 原来 300px，改大一些 */
+    margin-right: 25px;
+    text-align: center;
+}
+
+
+
+.members img {
+    width: 100%;   
+    height: auto;   /* 保持比例 */
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+.members h3 {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.members p {
+    font-size: 23px;
+}
+
+.members p a {
+    color: white;
+    text-decoration: none;
+}
+
+.members p a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .register-section form {
+        padding: 30px 20px;
+    }
+
+    .register-section h2 {
+        font-size: 28px;
+    }
+}
+/* 新增的菜单页面样式 */
+.menu {
+    background-color: #141D2A;
+    color: white;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.menu h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #FEF7E6;
+    text-align: center;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.menu-options a {
+    display: block;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ACACAC;
+    border-radius: 8px;
+    color: #FEF7E6;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-options a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FEF7E6;
+    transform: scale(1.05);
+}
+
+.menu-options a:active {
+    transform: scale(0.95);
+}
+
+/* 登录 & 注册滑动框 */
+
+
+/* 登录成功后的菜单默认隐藏 */
+#menu-section {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* 外层容器 */
+#login-section {
+  background-color: #141D2A;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 表单总容器 */
+.form_container {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden; /* ⚠ 必须隐藏溢出部分 */
+  text-align: center;
+  padding: 0; /* 内部 padding 交给 form */
+}
+
+
+/* 顶部切换导航 */
+.form_nav {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form_nav .nav_text {
+  flex: 1;
+  text-align: center;
+  line-height: 48px;
+  font-size: 16px;
+  color: #bdbbbb;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.form_nav .slider_tab {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  border-radius: 8px;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+input[type="radio"] { display: none; }
+
+#signup:checked ~ .slider_tab {
+  left: 50%;
+}
+
+#login:checked ~ label.login,
+#signup:checked ~ label.signup {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 表单内部 */
+.form_inner {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease;
+
+
+}
+
+
+
+
+
+#signup:checked ~ .form_inner {
+  transform: translateX(-50%);
+}
+
+/* 登录和注册表单 */
+form.login,
+form.signup {
+  width: 50%;
+  padding: 0;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+.field input {
+  width: 100%;
+  height: 45px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  box-sizing: border-box;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.field input:focus {
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 5px #ACACAC;
+}
+
+/* 按钮 */
+.btn input[type="submit"] {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.btn input[type="submit"]:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* 表单底部链接 */
+form p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+form p a {
+  color: #FEF7E6;
+  text-decoration: none;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式处理 */
+@media screen and (max-width: 1300px) {
+  .form_container {
+    padding: 30px 20px;
+  }
+  
+  .form_nav .nav_text {
+    font-size: 14px;
+  }
+  
+  .field input {
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .btn input[type="submit"] {
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  h1 {
+    display: none;
+  }
+  
+  .slogan {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .form_container {
+    padding: 30px 20px;
+  }
+  
+  .form_nav .nav_text {
+    font-size: 14px;
+  }
+  
+  .field input {
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .btn input[type="submit"] {
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  h1 {
+    display: none;
+  }
+  
+.slogan {
+    background-color: #141D2A;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 4.0em;
+    position: relative; /* 添加相对定位，便于logo定位 */
+}
+
+  .logo {
+    width: 20px;  /* 缩小宽度 */
+    height: auto; /* 保持比例 */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
