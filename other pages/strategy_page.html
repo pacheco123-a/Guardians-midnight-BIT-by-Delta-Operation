@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guardians: Midnight BIT</title>
+<meta name="description" content="content for beginners to quickstart">
+<style>
+:root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc;--muted:#9ca3af;--glass: rgba(255,255,255,0.03);}
+*{box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial;margin:0;background:linear-gradient(180deg,#071025 0%,#071629 60%);color:#e6eef6;line-height:1.6;}
+header{padding:28px 20px 14px;display:flex;gap:20px;align-items:center;}
+.logo{width:64px;height:64px;border-radius:10px;object-fit:cover;}
+.title{font-size:20px;margin:0;}
+.subtitle{color:var(--muted);font-size:13px;margin-top:4px;}
+.container{display:grid;grid-template-columns:300px 1fr;gap:24px;padding:18px;}
+nav{position:sticky;top:18px;height:calc(100vh - 36px);padding:14px;border-radius:12px;background:var(--glass);backdrop-filter:blur(6px);overflow:auto;}
+nav h3{margin:0 0 8px 0;}
+nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--accent);text-decoration:none;margin-bottom:6px;}
+nav a:hover{background:rgba(125,211,252,0.08);}
+main{padding:18px 22px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-height:60vh;}
+section{margin-bottom:26px;}
+h2{margin:0 0 8px 0;}
+.meta{color:var(--muted);font-size:13px;margin-bottom:12px;}
+.card{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin:10px 0;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+table{width:100%;border-collapse:collapse;}
+th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left;}
+.kbd{background:#071022;border:1px solid rgba(255,255,255,0.03);padding:4px 8px;border-radius:6px;font-family:monospace;}
+footer{padding:18px;text-align:center;color:var(--muted);font-size:13px;}
+button{margin-left:6px;padding:4px 10px;border-radius:6px;border:none;background:var(--accent);color:#000;cursor:pointer;font-weight:600;}
+button:hover{opacity:0.8;}
+@media (max-width:900px){.container{grid-template-columns:1fr;}.logo{display:none}.nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<img src="../images/logo1.svg" alt="Guardians: Midnight BIT Logo" class="logo">
+<div style="flex:1">
+  <h1 class="title" id="title-text">Guardians:Midnight BIT</h1>
+  <div class="subtitle" id="subtitle-text">Platform：PC  · Update：2025-09-16</div>
+</div>
+<div>
+  <button onclick="switchLanguage('en')">English</button>
+  <button onclick="switchLanguage('zh')">中文</button>
+</div>
+</header>
+
+<div class="container">
+<nav aria-label="directory">
+  <h3 id="nav-title">Directory</h3>
+  <a href="#basic" id="nav-basic">Basic Information</a>
+  <a href="#quickstart" id="nav-quickstart">Quick Start</a>
+  <a href="#characters" id="nav-characters">Characters and Equipment</a>
+  <a href="#faq" id="nav-faq">Faqs</a>
+  <a href="#media" id="nav-media">Walkthrough Video</a>
+</nav>
+
+<main>
+<section id="basic">
+  <h2 id="basic-h2">1. Basic Information</h2>
+  <div class="meta" id="basic-meta">Gamename:Guardians:Midnight BIT · Type：Action-Adventure RPG · Platform：Windows / Mac </div>
+  <div class="card">
+    <strong id="basic-summary-title">Core Summary:</strong>
+    <p id="basic-summary">《Guardians:Midnight BIT》 is a game centered on map exploration and puzzle-solving, where players must unlock maps in order to discover the antidote that can save the school.</p>
+  </div>
+</section>
+
+<section id="quickstart">
+  <h2 id="quickstart-h2">2. Quick Start</h2>
+  <div class="meta" id="quickstart-meta">Beginner’s 5-Minute Guide — Do These Things First</div>
+
+  <div class="card">
+    <h3 id="beginner-guide">Beginner’s Guide (Quick Walkthrough)</h3>
+    <ol>
+      <li id="control-desc">Learn the basic key controls (<kbd>WASD</kbd>: Movement directions, <kbd>Spacebar</kbd>: Enter other buildings, <kbd>B</kbd>: Open backpack, <kbd>P</kbd>: Pause game, <kbd>V</kbd>: Save progress)</li>
+      <li id="story-desc">Follow the story prompts to find relevant items and unlock different map dungeons.</li>
+      <li id="mini-desc">Complete mini-games to obtain gems, thereby unlocking the corresponding achievements.</li>
+    </ol>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h4 id="beginner-tips">Beginner Tips</h4>
+      <ul>
+        <li id="tip1">Don’t rush to explore the entire map. First, get familiar with the dorm and campus overworld, learn the zombie patrol patterns, then try long-range exploration.</li>
+        <li id="tip2">Prioritize obtaining key items. Get keys and antidote-related items first; they are essential for progressing the story and saving the campus.</li>
+        <li id="tip3">Be cautious of zombies. Keep your distance and use buildings or obstacles to avoid them. If the countdown is triggered, focus on finding the antidote before side exploration.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4 id="recommended-route">Recommended Starting Route</h4>
+      <p id="route-desc"><kbd>Dorm Exploration</kbd> → <kbd>Obtain Dorm Supervisor’s Hint Items</kbd> → <kbd>Campus Overworld (Avoid Zombies, Collect Keys)</kbd> → <kbd>Enter Library/Teaching Building to Complete First Mini-Game</kbd></p>
+    </div>
+  </div>
+</section>
+
+<section id="characters">
+  <h2 id="characters-h2">3. Characters and Equipment</h2>
+  <div class="card">
+    <h3 id="player-title">Player (You)</h3>
+    <ol>
+      <li id="char1">Starts in the dorm and explores the campus to uncover the story.</li>
+      <li id="char2">Can collect items, solve mini-games, and avoid zombies.</li>
+      <li id="char3">Health is affected if you touch zombies; triggering a 25-minute countdown to find the antidote.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h4 id="equipment-title">Equipment & Items</h4>
+    <table>
+      <thead><tr><th id="item-name-title">Name</th><th id="item-use-title">Use</th></tr></thead>
+      <tbody>
+        <tr><td id="item-keys-name">Keys</td><td id="item-keys-use">Required to enter locked buildings (library, classrooms, hospital).</td></tr>
+        <tr><td id="item-antidote-name">Antidote</td><td id="item-antidote-use">Needed to stop the 25-minute countdown after touching a zombie.</td></tr>
+        <tr><td id="item-gems-name">Gems</td><td id="item-gems-use">Can be used to unlock achievements or bonus story content.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="faq">
+  <h2 id="faq-h2">4. Faqs</h2>
+  <div class="card">
+    <h4 id="faq-q1">Q1: What should I do at the beginning?</h4>
+    <p id="faq-a1">You start the game in the dorm. First, talk to the dorm supervisor or other NPCs to get story clues and mission guidance. Interacting with NPCs is key to advancing the story and understanding your objectives.</p>
+  </div>
+  <div class="card">
+    <h4 id="faq-q2">Q2: Where can I get keys and items? What are they for?</h4>
+    <p id="faq-a2">Some campus buildings (library, classrooms, hospital, etc.) require keys to enter. Keys are usually found at the security booth. Items are used to trigger in-building story events or mini-games. Completing mini-games grants gem rewards, unlocks achievements, and progresses the story.</p>
+  </div>
+  <div class="card">
+    <h4 id="faq-q3">Q3: What should I do if I encounter a zombie? How does the countdown work?</h4>
+    <p id="faq-a3">Try to avoid zombies and keep a safe distance. If touched, a 25-minute countdown will start, during which you must find the antidote. Knowing the map, planning your route, and using items effectively are key to saving the campus.</p>
+  </div>
+</section>
+
+<section id="media">
+  <h2 id="media-h2">5. Walkthrough Video</h2>
+  <div class="card">
+    <p id="video-title"><em>Release Video:</em></p>
+    <div class="card">
+      <iframe width="100%" height="550" src="../images/introduction_video.mp4" title="imtroduction_video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+</main>
+</div>
+
+<footer>
+  <p id="footer-text">Thanks for your playing.</p>
+  <p id="footer-copyright">Copyright @ 2025 Guardians: Midnight BIT All Rights Reserved.</p>
+</footer>
+
+<script>
+const translations = {
+  zh:{
+    "title-text":"守护者：午夜 BIT",
+    "subtitle-text":"平台：PC  · 更新：2025-09-16",
+    "nav-title":"目录",
+    "nav-basic":"基础信息",
+    "nav-quickstart":"快速上手",
+    "nav-characters":"角色与装备",
+    "nav-faq":"常见问题",
+    "nav-media":"通关视频",
+    "basic-h2":"1. 基础信息",
+    "basic-meta":"游戏名称：守护者：午夜 BIT · 类型：动作冒险 RPG · 平台：Windows / Mac",
+    "basic-summary-title":"核心简介：",
+    "basic-summary":"《守护者：午夜 BIT》是一款以地图探索和解谜为核心的游戏，玩家需要解锁地图以寻找能够拯救学校的解药。",
+    "quickstart-h2":"2. 快速上手",
+    "quickstart-meta":"新手 5 分钟指南 — 首先做这些事情",
+    "beginner-guide":"新手指南（快速流程）",
+    "control-desc":"学习基本操作（<kbd>WASD</kbd>：移动方向，<kbd>空格</kbd>：进入建筑，<kbd>B</kbd>：打开背包，<kbd>P</kbd>：暂停，<kbd>V</kbd>：保存进度）",
+    "story-desc":"跟随剧情提示寻找相关物品并解锁不同地图副本。",
+    "mini-desc":"完成小游戏以获得宝石，从而解锁相应成就。",
+    "beginner-tips":"新手提示",
+    "tip1":"不要急于探索整个地图。先熟悉宿舍和校园地图，了解丧尸巡逻规律，再尝试远程探索。",
+    "tip2":"优先获取关键物品。先获取钥匙和解药相关物品，它们对于推进剧情和拯救校园至关重要。",
+    "tip3":"注意丧尸。保持安全距离，并利用建筑或障碍物躲避它们。如触发倒计时，请优先寻找解药。",
+    "recommended-route":"推荐起始路线",
+    "route-desc":"<kbd>宿舍探索</kbd> → <kbd>获取宿管提示物品</kbd> → <kbd>校园地图（避开丧尸，收集钥匙）</kbd> → <kbd>进入图书馆/教学楼完成第一个小游戏</kbd>",
+    "characters-h2":"3. 角色与装备",
+    "player-title":"玩家（你）",
+    "char1":"从宿舍开始探索校园以揭示剧情。",
+    "char2":"可以收集物品、完成小游戏并躲避丧尸。",
+    "char3":"触碰丧尸会影响生命值，并触发 25 分钟倒计时寻找解药。",
+    "equipment-title":"装备与道具",
+    "item-name-title":"名称",
+    "item-use-title":"用途",
+    "item-keys-name":"钥匙",
+    "item-keys-use":"进入锁定建筑（图书馆、教室、医院）所需。",
+    "item-antidote-name":"解药",
+    "item-antidote-use":"触碰丧尸后停止 25 分钟倒计时所需。",
+    "item-gems-name":"宝石",
+    "item-gems-use":"可用于解锁成就或额外剧情内容。",
+    "faq-h2":"4. 常见问题",
+    "faq-q1":"Q1：游戏开始时我应该做什么？",
+    "faq-a1":"你出生在宿舍。首先与宿管阿姨或其他 NPC 对话，获取剧情线索和任务指引。与 NPC 互动是推进剧情和了解目标的关键。",
+    "faq-q2":"Q2：钥匙和道具在哪里获得？它们有什么用？",
+    "faq-a2":"部分建筑（图书馆、教学楼、校医院等）需要钥匙进入。钥匙通常在保安亭获取。道具用于触发建筑内剧情或小游戏。完成小游戏可获得宝石奖励，解锁成就并推动剧情。",
+    "faq-q3":"Q3：遇到丧尸怎么办？倒计时如何处理？",
+    "faq-a3":"尽量躲避丧尸并保持安全距离。如果被触碰，将触发 25 分钟倒计时，在此期间必须找到解药。熟悉地图、规划路线并合理使用道具是拯救校园的关键。",
+    "media-h2":"5. 通关视频",
+    "video-title":"<em>发布视频：</em>",
+    "footer-text":"感谢您的游玩。",
+    "footer-copyright":"版权 © 2025 守护者：午夜 BIT 保留所有权利。"
+  },
+  en:{
+    "title-text":"Guardians:Midnight BIT",
+    "subtitle-text":"Platform：PC  · Update：2025-09-16",
+    "nav-title":"Directory",
+    "nav-basic":"Basic Information",
+    "nav-quickstart":"Quick Start",
+    "nav-characters":"Characters and Equipment",
+    "nav-faq":"Faqs",
+    "nav-media":"Walkthrough Video",
+    "basic-h2":"1. Basic Information",
+    "basic-meta":"Gamename:Guardians:Midnight BIT · Type：Action-Adventure RPG · Platform：Windows / Mac",
+    "basic-summary-title":"Core Summary:",
+    "basic-summary":"《Guardians:Midnight BIT》 is a game centered on map exploration and puzzle-solving, where players must unlock maps in order to discover the antidote that can save the school.",
+    "quickstart-h2":"2. Quick Start",
+    "quickstart-meta":"Beginner’s 5-Minute Guide — Do These Things First",
+    "beginner-guide":"Beginner’s Guide (Quick Walkthrough)",
+    "control-desc":"Learn the basic key controls (<kbd>WASD</kbd>: Movement directions, <kbd>Spacebar</kbd>: Enter other buildings, <kbd>B</kbd>: Open backpack, <kbd>P</kbd>: Pause game, <kbd>V</kbd>: Save progress)",
+    "story-desc":"Follow the story prompts to find relevant items and unlock different map dungeons.",
+    "mini-desc":"Complete mini-games to obtain gems, thereby unlocking the corresponding achievements.",
+    "beginner-tips":"Beginner Tips",
+    "tip1":"Don’t rush to explore the entire map. First, get familiar with the dorm and campus overworld, learn the zombie patrol patterns, then try long-range exploration.",
+    "tip2":"Prioritize obtaining key items. Get keys and antidote-related items first; they are essential for progressing the story and saving the campus.",
+    "tip3":"Be cautious of zombies. Keep your distance and use buildings or obstacles to avoid them. If the countdown is triggered, focus on finding the antidote before side exploration.",
+    "recommended-route":"Recommended Starting Route",
+    "route-desc":"<kbd>Dorm Exploration</kbd> → <kbd>Obtain Dorm Supervisor’s Hint Items</kbd> → <kbd>Campus Overworld (Avoid Zombies, Collect Keys)</kbd> → <kbd>Enter Library/Teaching Building to Complete First Mini-Game</kbd>",
+    "characters-h2":"3. Characters and Equipment",
+    "player-title":"Player (You)",
+    "char1":"Starts in the dorm and explores the campus to uncover the story.",
+    "char2":"Can collect items, solve mini-games, and avoid zombies.",
+    "char3":"Health is affected if you touch zombies; triggering a 25-minute countdown to find the antidote.",
+    "equipment-title":"Equipment & Items",
+    "item-name-title":"Name",
+    "item-use-title":"Use",
+    "item-keys-name":"Keys",
+    "item-keys-use":"Required to enter locked buildings (library, classrooms, hospital).",
+    "item-antidote-name":"Antidote",
+    "item-antidote-use":"Needed to stop the 25-minute countdown after touching a zombie.",
+    "item-gems-name":"Gems",
+    "item-gems-use":"Can be used to unlock achievements or bonus story content.",
+    "faq-h2":"4. Faqs",
+    "faq-q1":"Q1: What should I do at the beginning?",
+    "faq-a1":"You start the game in the dorm. First, talk to the dorm supervisor or other NPCs to get story clues and mission guidance. Interacting with NPCs is key to advancing the story and understanding your objectives.",
+    "faq-q2":"Q2: Where can I get keys and items? What are they for?",
+    "faq-a2":"Some campus buildings (library, classrooms, hospital, etc.) require keys to enter. Keys are usually found at the security booth. Items are used to trigger in-building story events or mini-games. Completing mini-games grants gem rewards, unlocks achievements, and progresses the story.",
+    "faq-q3":"Q3: What should I do if I encounter a zombie? How does the countdown work?",
+    "faq-a3":"Try to avoid zombies and keep a safe distance. If touched, a 25-minute countdown will start, during which you must find the antidote. Knowing the map, planning your route, and using items effectively are key to saving the campus.",
+    "media-h2":"5. Walkthrough Video",
+    "video-title":"<em>Release Video:</em>",
+    "footer-text":"Thanks for your playing.",
+    "footer-copyright":"Copyright @ 2025 Guardians: Midnight BIT All Rights Reserved."
+  }
+};
+
+function switchLanguage(lang){
+  Object.keys(translations[lang]).forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.innerHTML=translations[lang][id];
+  });
+}
+</script>
+</body>
+</html>
